@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Webcomic;
+    src: url(Webcomic.ttf);
+}
+@font-face {
+    font-family: writer ;
+    src: url(atwriter.ttf);
+}
+@font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
+}
+#cenario {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url(silvio.png);  
+background-repeat: no-repeat; 
+background-size: cover;
+ opacity: 0.3; /* Opacidade desejada para a imagem de fundo */
+ animation: moveBackground 20s linear infinite; /* Aplicando a animação ao fundo */
+ z-index: -1; /* Coloca a div atrás do conteúdo principal */
+ 
+}
+
+@keyframes moveBackground {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+
+.conteudo {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   flex-direction: column;
+   
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: Webcomic, sans-serif;
+    margin-bottom: .625rem;
+}
+p {
+    font-style: normal;
+    font-weight: 100;
+    font-family: writer, sans-serif;
+    margin-bottom: .625rem;
+}
+#message {
+    font-family: minecraft, sans-serif;
+    margin-top: .625rem;
+}
+input {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    padding-left: .3125rem;
+    padding-right: .3125rem;
+    font-family: minecraft, sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+button {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    padding-left: .3125rem;
+    padding-right: .3125rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 20px;
+}

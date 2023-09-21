@@ -22,6 +22,7 @@
                 <p>Tente adivinhar um número entre 1 e 100:</p>
                 <input type="number" id="guess">
                 <button id="btn" onclick="checkGuess()">Verificar</button>
+                <button id="btn" ><a href="Silvio.html">Reniciar</a></button>
                 <p id="message"></p>
             </div>
            
@@ -39,9 +40,9 @@
         function checkGuess() {
             const guess = parseInt(document.getElementById("guess").value);
 
-            if( attempts <= 0){
+            if( attempts <= 1){
                 document.getElementById("message").style.color = 'red'
-                document.getElementById("message").textContent = `Limite de tentativas atingida`;
+                document.getElementById("message").textContent = `Limite de tentativas atingida, você é BETA o numero era `+ randomNumber;
                 document.getElementById("guess").style.display = "none";
                 document.getElementById("btn").style.display = "none";
             }
@@ -88,8 +89,10 @@ function eleminarVida(){
     attempts-1
     atualizarVidas()
 }
+console.log(randomNumber)
 
  atualizarVidas();
+ 
 
         
     </script>
